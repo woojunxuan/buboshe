@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url
 from buboshe_app import views
 
 urlpatterns = [
-    # path(r'^$', views.index, name='index'),
-    url(r'^$', views.index, name='index'),
+    path('index/', views.index),
     path('admin/', admin.site.urls),
 ]

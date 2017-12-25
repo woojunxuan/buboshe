@@ -8,32 +8,182 @@
     <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
     <title></title>
   </head>
+  <style media="screen">
+    .ui.text.menu {
+      background-color: red;
+    }
+
+    .ui.basic.segment.container.content {
+      /* background-color: blue; */
+    }
+  </style>
+
   <body>
-    <!-- <div class="ui text menu"> -->
-      <div class="ui four column grid">
-        <div class="column">
-          <div class="ui three column grid">
-            <div class="column">
-              <p class="ui center aligned header">SHOP</p>
-            </div>
-            <div class="column">SHOP</div>
-            <div class="column">SHOP</div>
-          </div>
-        </div>
-        <div class="column">
-          logo BOBO
-        </div>
-        <div class="column">
-          搜索
-        </div>
-        <div class="column">
-          登录/登出
+    <!-- 导航栏 -->
+    <div class="ui borderless menu">
+      <a class="header item">
+        Home
+      </a>
+      <a class="header item">
+        Messages
+      </a>
+      <a class="header item">
+        Friends
+      </a>
+      <div class="center aligned menu">
+        <a class="header item">
+          Friends
+        </a>
+      </div>
+      <div class="right menu">
+        <div class=" item">
+
+          <div class="ui transparent icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search  icon"></i>
+      </div>
         </div>
       </div>
-    <!-- </div> -->
-
-    <div class="ui segment">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <!-- 文章列表 -->
+    <div class="ui basic segment container content">
+      <div class="ui three column grid">
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+        <div class="column">
+          <a class="ui fluid card" href="#">
+              <div class="image" >
+                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
+              </div>
+          </a>
+          <div class="title header" href="#">aa</div>
+          <i class="icon grey unhide"></i>
+          <span style="color:#bbbbbb">10K</span>
+          <span class="" style="color:rgb(226, 226, 226)">|</span>
+          <i class="icon grey checkmark"></i>
+          <span style="color:#bbbbbb">10 people got it</span>
+        </div>
+      </div>
+    </div>
+    <!-- 创始人图片列表  -->
+    <div class="ui segment container content-show-originator">
+      <div class="column">
+        <img src="{% static 'images/default.jpg' %}" alt="">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/default.jpg' %}" alt="">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/default.jpg' %}" alt="">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/default.jpg' %}" alt="">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/default.jpg' %}" alt="">
+      </div>
     </div>
   </body>
 </html>
