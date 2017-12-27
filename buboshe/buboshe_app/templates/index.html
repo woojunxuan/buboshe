@@ -7,39 +7,54 @@
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
     <title></title>
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script type="text/javascript">
+       $youziku.load("body", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
+       $youziku.load("#a,h2,h4,h3,div,span,h6", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
+       /*．．．*/
+       $youziku.draw();
+    </script>
   </head>
   <style media="screen">
-    .ui.text.menu {
-      background-color: red;
+    .ui.text.borderless.menu > a > h3{
+      margin-left: 30px;
     }
-
+    .ui.text.borderless.menu > a::after{
+      margin-left: 10px;
+    }
     .ui.basic.segment.container.content {
       /* background-color: blue; */
+    }
+    .ui.center.aligned.basic.segment.container.content-show-originator > div > img {
+      margin-left: 20px;
+    }
+    .ui.center.aligned.basic.segment.container.index-footer > i{
+      margin-left: 30px;
+    }
+    .ui.center.aligned.basic.segment.container.index-footer>  h2 > span {
+      margin-left: 20px;
+    }
+    .ui.center.aligned.basic.segment.container.index-footer> h4 > div > span {
+      margin-left: 10px;
     }
   </style>
 
   <body>
     <!-- 导航栏 -->
-    <div class="ui borderless menu">
+    <div class="ui  text borderless  menu">
       <a class="header item">
-        Home
+        <h3>雲笈</h3>
       </a>
       <a class="header item">
-        Messages
+        <h3>祓禊</h3>
       </a>
       <a class="header item">
-        Friends
+        <h3>赛博</h3>
       </a>
-      <div class="center aligned menu">
-        <a class="header item">
-          Friends
-        </a>
-      </div>
       <div class="right menu">
         <div class=" item">
-
           <div class="ui transparent icon input">
-        <input type="text" placeholder="Search...">
+        <input type="text">
         <i class="search  icon"></i>
       </div>
         </div>
@@ -168,22 +183,32 @@
       </div>
     </div>
     <!-- 创始人图片列表  -->
-    <div class="ui segment container content-show-originator">
-      <div class="column">
-        <img src="{% static 'images/default.jpg' %}" alt="">
-      </div>
-      <div class="column">
-        <img src="{% static 'images/default.jpg' %}" alt="">
-      </div>
-      <div class="column">
-        <img src="{% static 'images/default.jpg' %}" alt="">
-      </div>
-      <div class="column">
-        <img src="{% static 'images/default.jpg' %}" alt="">
-      </div>
-      <div class="column">
-        <img src="{% static 'images/default.jpg' %}" alt="">
-      </div>
+    <div class="ui center aligned basic segment container content-show-originator">
+        <div class="ui tiny circular images">
+          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="河东君">
+          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
+        </div>
     </div>
+    <div class="ui center aligned basic segment container index-footer">
+      <i class="small inverted circular green wechat icon"></i>
+      <i class="small inverted circular red weibo icon"></i>
+      <i class="small inverted blue circular qq icon"></i>
+      <i class="small inverted blue circular qq icon"></i>
+      <h2  class="ui header">
+        <span>HOME</span><span>HOME</span><span>HOME</span><span>HOME</span><span>HOME</span>
+      </h2>
+      <h4  class="ui tiny header">
+        <div class="sub header">
+          <span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span>
+        </div>
+      </h4>
+      <h6>
+        ©2017 buboshe.com
+      </h6>
+    </div>
+
   </body>
 </html>

@@ -18,6 +18,7 @@ from django.urls import path
 from buboshe_app import views
 
 urlpatterns = [
-    path('index/', views.index),
+    path('', views.index),
+    # path('index/', views.index),
     path('admin/', admin.site.urls),
 ]
