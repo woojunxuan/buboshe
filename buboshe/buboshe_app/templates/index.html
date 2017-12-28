@@ -6,21 +6,61 @@
     <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
-    <title></title>
+    <link rel="Shortcut Icon" href="{% static 'images/bobo-logo-mascot.jpg' %}" type="image/x-icon">
+    <title>布波社</title>
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
-       $youziku.load("body", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
-       $youziku.load("#a,h2,h4,h3,div,span,h6", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
-       /*．．．*/
-       $youziku.draw();
+      $youziku.load("body", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
+      $youziku.load("a,h2,h4,h3,div,span,h6,title", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
+      /*．．．*/
+      $youziku.draw();
     </script>
   </head>
   <style media="screen">
-    .ui.text.borderless.menu > a > h3{
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body {
+      background-color: #fcfdf8;
+    }
+    .ui.text.borderless.menu {
       margin-left: 30px;
     }
-    .ui.text.borderless.menu > a::after{
-      margin-left: 10px;
+    #header_menu{
+      margin-left: 30px;
+      position: relative;
+      border-bottom: 0px solid #000;
+      transition: border-bottom 1s;
+      padding-bottom: 5px;
+    }
+
+    #header_menu:hover {
+      /* animation: slowly_show  1s linear 0s 1 alternate;
+      border-bottom:1px dashed #000;
+
+      animation-fill-mode: forwards; */
+      /* transition-property: border-bottom;
+      transition-duration: 1s;
+      transition-delay: 0s;
+      transition-timing-function: linear; */
+      border-bottom: 1px solid #000;
+    }
+
+
+    @keyframes slowly_show {
+      /* 0%   {background:red; left:500px; bottom:50px;}
+      25%  {background:red; left:500px;height:130px;bottom:50px;}
+      50%  {background:red; left:500px; height:160px;bottom:50px;}
+      75%  {background:red; left:500px;height:190px; bottom:50px;}
+      100% {background:red; left:500px; height:210px;bottom:50px;} */
+        from{
+          border-bottom:1px dashed #000;
+            /* background-color: skyblue; */
+        }
+        to{
+          border-bottom: 1px solid #000;
+        }
     }
     .ui.basic.segment.container.content {
       /* background-color: blue; */
@@ -41,15 +81,15 @@
 
   <body>
     <!-- 导航栏 -->
-    <div class="ui  text borderless  menu">
-      <a class="header item">
-        <h3>雲笈</h3>
+    <div class="ui text fitted borderless menu">
+      <a class="header item" id="header_menu">
+        <h2>雲笈</h2>
       </a>
-      <a class="header item">
-        <h3>祓禊</h3>
+      <a class="header item" id="header_menu">
+        <h2>祓禊</h2>
       </a>
-      <a class="header item">
-        <h3>赛博</h3>
+      <a class="header item" id="header_menu">
+        <h2>赛博</h2>
       </a>
       <div class="right menu">
         <div class=" item">
@@ -60,6 +100,7 @@
         </div>
       </div>
     </div>
+    <div class="ui divider"></div>
     <!-- 文章列表 -->
     <div class="ui basic segment container content">
       <div class="ui three column grid">
@@ -69,7 +110,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -82,7 +123,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -95,7 +136,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -108,7 +149,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -121,7 +162,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -134,7 +175,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -147,7 +188,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -160,7 +201,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -173,7 +214,7 @@
                 <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
               </div>
           </a>
-          <div class="title header" href="#">aa</div>
+          <div class="title header" href="#">布波社文章</div>
           <i class="icon grey unhide"></i>
           <span style="color:#bbbbbb">10K</span>
           <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -185,28 +226,31 @@
     <!-- 创始人图片列表  -->
     <div class="ui center aligned basic segment container content-show-originator">
         <div class="ui tiny circular images">
-          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="河东君">
-          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/default.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/originator-1.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/originator-2.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/originator-3.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/originator-4.jpg' %}" alt="">
+          <img class="ui tiny circular image" src="{% static 'images/originator-5.jpg' %}" alt="">
         </div>
     </div>
     <div class="ui center aligned basic segment container index-footer">
-      <i class="small inverted circular green wechat icon"></i>
-      <i class="small inverted circular red weibo icon"></i>
-      <i class="small inverted blue circular qq icon"></i>
-      <i class="small inverted blue circular qq icon"></i>
-      <h2  class="ui header">
-        <span>HOME</span><span>HOME</span><span>HOME</span><span>HOME</span><span>HOME</span>
-      </h2>
+      <i class="large inverted circular green wechat icon"></i>
+      <i class="large inverted circular red weibo icon"></i>
+      <i class="large inverted yellow circular qq icon"></i>
+      <i class="large inverted blue circular facebook f icon"></i>
+      <h1>
+        <a class="ui sub header" href="#">博客</a>
+        <a class="ui sub header" href="https://www.jianshu.com/u/5b7d67布波社文章8535">简书</a>
+        <a class="ui sub header" href="https://read.douban.com/column/7581548/">豆瓣</a>
+        <a class="ui sub header" href="http://buboshe.lofter.com/">乐乎</a>
+      </h1>
       <h4  class="ui tiny header">
         <div class="sub header">
           <span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span>
         </div>
       </h4>
       <h6>
-        ©2017 buboshe.com
+        ©2017 布波社版权所有
       </h6>
     </div>
 
