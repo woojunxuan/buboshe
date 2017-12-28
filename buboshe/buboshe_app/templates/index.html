@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
     <link rel="Shortcut Icon" href="{% static 'images/bobo-logo-mascot.jpg' %}" type="image/x-icon">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
     <title>布波社</title>
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
@@ -15,16 +16,27 @@
       /*．．．*/
       $youziku.draw();
     </script>
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+<script type="text/javascript">
+   $youziku.load("#buboshe-logo,#nav-header", "4e0d0d55d1cb4af3b597fcf2e22727ae", "CaiYunHanMaoBi-Xing");
+   /*$youziku.load("#id1,.class1,h1", "4e0d0d55d1cb4af3b597fcf2e22727ae", "CaiYunHanMaoBi-Xing");*/
+   /*．．．*/
+   $youziku.draw();
+</script>
   </head>
   <style media="screen">
-    *{
+    * {
         padding: 0;
         margin: 0;
     }
     body {
       background-color: #fcfdf8;
     }
-    .ui.text.borderless.menu {
+    /* .ui.text.fitted.borderless.seven.item.menu > #item{
+      background-color: red;
+    } */
+
+    /* .ui.text.borderless.menu {
       margin-left: 30px;
     }
     #header_menu{
@@ -36,69 +48,96 @@
     }
 
     #header_menu:hover {
-      /* animation: slowly_show  1s linear 0s 1 alternate;
-      border-bottom:1px dashed #000;
-
-      animation-fill-mode: forwards; */
-      /* transition-property: border-bottom;
-      transition-duration: 1s;
-      transition-delay: 0s;
-      transition-timing-function: linear; */
       border-bottom: 1px solid #000;
     }
-
-
-    @keyframes slowly_show {
-      /* 0%   {background:red; left:500px; bottom:50px;}
-      25%  {background:red; left:500px;height:130px;bottom:50px;}
-      50%  {background:red; left:500px; height:160px;bottom:50px;}
-      75%  {background:red; left:500px;height:190px; bottom:50px;}
-      100% {background:red; left:500px; height:210px;bottom:50px;} */
+    .right.menu {
+      margin-right: 50px;
+    } */
+    /* @keyframes slowly_show {
         from{
           border-bottom:1px dashed #000;
-            /* background-color: skyblue; */
         }
         to{
           border-bottom: 1px solid #000;
         }
-    }
-    .ui.basic.segment.container.content {
-      /* background-color: blue; */
-    }
-    .ui.center.aligned.basic.segment.container.content-show-originator > div > img {
+    } */
+
+    #originator-list > div > img {
       margin-left: 20px;
     }
-    .ui.center.aligned.basic.segment.container.index-footer > i{
+    #web-footer > i{
       margin-left: 30px;
     }
-    .ui.center.aligned.basic.segment.container.index-footer>  h2 > span {
+    #web-footer >  h2 > span {
       margin-left: 20px;
     }
-    .ui.center.aligned.basic.segment.container.index-footer> h4 > div > span {
+    #web-footer > h4 > div > span {
       margin-left: 10px;
     }
   </style>
 
   <body>
     <!-- 导航栏 -->
-    <div class="ui text fitted borderless menu">
-      <a class="header item" id="header_menu">
-        <h2>雲笈</h2>
-      </a>
-      <a class="header item" id="header_menu">
-        <h2>祓禊</h2>
-      </a>
-      <a class="header item" id="header_menu">
-        <h2>赛博</h2>
-      </a>
-      <div class="right menu">
-        <div class=" item">
-          <div class="ui transparent icon input">
-        <input type="text">
-        <i class="search  icon"></i>
+    <div class="ui text fitted borderless three item menu">
+      <div class="item">
+        <a class="browse item">
+          <h1 id="nav-header">云笈</h1>
+        </a>
+        <div class="ui fluid popup bottom left transition hidden">
+          <div class="ui four column relaxed equal height divided grid">
+            <div class="column">
+              <h4 class="ui header">Fabrics</h4>
+              <div class="ui link list">
+                <a class="item">Cashmere</a>
+                <a class="item">Linen</a>
+                <a class="item">Cotton</a>
+                <a class="item">Viscose</a>
+              </div>
+            </div>
+            <div class="column">
+              <h4 class="ui header">Size</h4>
+              <div class="ui link list">
+                <a class="item">Small</a>
+                <a class="item">Medium</a>
+                <a class="item">Large</a>
+                <a class="item">Plus Sizes</a>
+              </div>
+            </div>
+            <div class="column">
+              <h4 class="ui header">Colored</h4>
+              <div class="ui link list">
+                <a class="item">Neutrals</a>
+                <a class="item">Brights</a>
+                <a class="item">Pastels</a>
+              </div>
+            </div>
+            <div class="column">
+              <h4 class="ui header">Types</h4>
+              <div class="ui link list">
+                <a class="item">Knitwear</a>
+                <a class="item">Outerwear</a>
+                <a class="item">Pants</a>
+                <a class="item">Shoes</a>
+              </div>
+            </div>
+          </div>
+</div>
+        <a class="item">
+          <h1 id="nav-header">祓禊</h1>
+        </a>
+        <a class="item">
+          <h1 id="nav-header">赛博</h1>
+        </a>
       </div>
-        </div>
+      <!-- 中间LOGO -->
+      <div class="item">
+        <img class="ui middle aligned mini circular image" src="{% static 'images/bobo-logo.jpg' %}" alt=""><span id="buboshe-logo" style="font-size: 40px;">布波社</span>
       </div>
+      <div class="item">
+
+      </div>
+    </div>
+
     </div>
     <div class="ui divider"></div>
     <!-- 文章列表 -->
@@ -224,7 +263,7 @@
       </div>
     </div>
     <!-- 创始人图片列表  -->
-    <div class="ui center aligned basic segment container content-show-originator">
+    <div class="ui center aligned basic segment container content-show-originator" id="originator-list">
         <div class="ui tiny circular images">
           <img class="ui tiny circular image" src="{% static 'images/originator-1.jpg' %}" alt="">
           <img class="ui tiny circular image" src="{% static 'images/originator-2.jpg' %}" alt="">
@@ -233,7 +272,7 @@
           <img class="ui tiny circular image" src="{% static 'images/originator-5.jpg' %}" alt="">
         </div>
     </div>
-    <div class="ui center aligned basic segment container index-footer">
+    <div class="ui center aligned basic segment container" id="web-footer">
       <i class="large inverted circular green wechat icon"></i>
       <i class="large inverted circular red weibo icon"></i>
       <i class="large inverted yellow circular qq icon"></i>
@@ -253,6 +292,18 @@
         ©2017 布波社版权所有
       </h6>
     </div>
-
+    <script type="text/javascript">
+    $('.example .menu .browse')
+      .popup({
+        inline     : true,
+        hoverable  : true,
+        position   : 'bottom left',
+        delay: {
+          show: 300,
+          hide: 800
+        }
+      })
+      ;
+    </script>
   </body>
 </html>
