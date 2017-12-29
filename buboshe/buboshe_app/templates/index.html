@@ -3,12 +3,27 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>布波社</title>
     <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
     <link rel="Shortcut Icon" href="{% static 'images/bobo-logo-mascot.jpg' %}" type="image/x-icon">
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
-    <title>布波社</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/semantic-ui/2.2.7/semantic.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/semantic-ui/2.2.7/semantic.min.js"></script>
+    <script src="http://cdn.staticfile.org/vue/2.0.3/vue.js"></script>
+    <script src="http://cdn.staticfile.org/layer/2.3/layer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-validator/2.1.7/vue-validator.min.js">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-form/0.3.1/vue-form.min.js">
+
+    </script>
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
       $youziku.load("body", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
@@ -79,64 +94,66 @@
   <body>
     <!-- 导航栏 -->
     <div class="ui text fitted borderless three item menu">
-      <div class="item">
-        <a class="browse item">
+      <a class="item" id="show-popup">
+        <h1 id="nav-header">祓禊</h1>
+        </a>
+        <div class="ui flowing popup top left transition hidden">
+  <div class="ui three column divided center aligned grid">
+    <div class="column">
+      <h4 class="ui header">Basic Plan</h4>
+      <p><b>2</b> projects, $10 a month</p>
+      <div class="ui button">Choose</div>
+    </div>
+    <div class="column">
+      <h4 class="ui header">Business Plan</h4>
+      <p><b>5</b> projects, $20 a month</p>
+      <div class="ui button">Choose</div>
+    </div>
+    <div class="column">
+      <h4 class="ui header">Premium Plan</h4>
+      <p><b>8</b> projects, $25 a month</p>
+      <div class="ui button">Choose</div>
+    </div>
+  </div>
+</div>
+
+
+      <a class="ui  item">
+        <h1 id="nav-header">祓禊</h1>
+      </a>
+      <a class="ui  item">
+        <h1 id="nav-header">祓禊</h1>
+      </a>
+      <!-- <div class="item">
+        <a class="browse item" id="show-popup">
           <h1 id="nav-header">云笈</h1>
         </a>
-        <div class="ui fluid popup bottom left transition hidden">
-          <div class="ui four column relaxed equal height divided grid">
-            <div class="column">
-              <h4 class="ui header">Fabrics</h4>
-              <div class="ui link list">
-                <a class="item">Cashmere</a>
-                <a class="item">Linen</a>
-                <a class="item">Cotton</a>
-                <a class="item">Viscose</a>
-              </div>
-            </div>
-            <div class="column">
-              <h4 class="ui header">Size</h4>
-              <div class="ui link list">
-                <a class="item">Small</a>
-                <a class="item">Medium</a>
-                <a class="item">Large</a>
-                <a class="item">Plus Sizes</a>
-              </div>
-            </div>
-            <div class="column">
-              <h4 class="ui header">Colored</h4>
-              <div class="ui link list">
-                <a class="item">Neutrals</a>
-                <a class="item">Brights</a>
-                <a class="item">Pastels</a>
-              </div>
-            </div>
-            <div class="column">
-              <h4 class="ui header">Types</h4>
-              <div class="ui link list">
-                <a class="item">Knitwear</a>
-                <a class="item">Outerwear</a>
-                <a class="item">Pants</a>
-                <a class="item">Shoes</a>
-              </div>
-            </div>
-          </div>
-</div>
+        <div class="ui flowing popup top left transition hidden" style="top: 300px; left: 5px; bottom: auto; right: auto; width: 200px;">
+              <a href="#">
+                <h4 class="ui header">武侠</h4>
+              </a>
+              <a href="#">
+                <h4 class="ui header">武侠</h4>
+              </a>
+              <a href="#">
+                <h4 class="ui header">武侠</h4>
+              </a>
+              <a href="#">
+                <h4 class="ui header">武侠</h4>
+              </a>
+        </div>
+
         <a class="item">
           <h1 id="nav-header">祓禊</h1>
         </a>
         <a class="item">
           <h1 id="nav-header">赛博</h1>
         </a>
-      </div>
+      </div> -->
       <!-- 中间LOGO -->
-      <div class="item">
+      <!-- <div class="item">
         <img class="ui middle aligned mini circular image" src="{% static 'images/bobo-logo.jpg' %}" alt=""><span id="buboshe-logo" style="font-size: 40px;">布波社</span>
-      </div>
-      <div class="item">
-
-      </div>
-    </div>
+      </div> -->
 
     </div>
     <div class="ui divider"></div>
@@ -293,17 +310,8 @@
       </h6>
     </div>
     <script type="text/javascript">
-    $('.example .menu .browse')
-      .popup({
-        inline     : true,
-        hoverable  : true,
-        position   : 'bottom left',
-        delay: {
-          show: 300,
-          hide: 800
-        }
-      })
-      ;
+    // [[3]] 初始化 Popup
+      $('#show-popup').popup({ position: 'bottom center', offset: 20});
     </script>
   </body>
 </html>
