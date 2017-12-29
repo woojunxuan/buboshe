@@ -16,22 +16,33 @@
 <script src="http://cdn.staticfile.org/layer/2.3/layer.js"></script>
 
     <title></title>
-    
+
   </head>
   <body>
-    <div class="ui icon button" data-tooltip="Add users to your feed">
-          <i class="add icon"></i>
-      </div>
-      <div class="ui icon button" data-tooltip="Add users to your feed" data-position="bottom left" data-inverted="">
-          <i class="minus icon"></i>
-      </div>
-      <span class="with-popup" data-content="知识点标签"><i class="tags icon"></i></span>
+    <div class="ui floating labeled icon dropdown button">
+    <input type="hidden">
+    <i class="world icon"></i>
+    <span class="text">选择地区</span>
+    <div class="menu">
+        <div class="item" data-value="1">北京</div>
+        <div class="item" data-value="2">上海</div>
+        <div class="item" data-value="3">天津</div>
+        <div class="item" data-value="4">湖北</div>
+    </div>
+</div>
     <script>
-        // 2 种方式都可以
-        $('.with-popup').popup();
-        $('.with-popup').popup({ position: 'bottom left' });
-        // 如果 popup 的位置不够理想，还可以设置 offset 进行微调，例如下面向左偏移 12 像素
-        $('.with-popup').popup({ position: 'bottom left', offset: -12 });
+    // 初始化方式一：
+$('.dropdown').dropdown();
+// 初始化方式二：Dropdown，当选项变化时触发 onChange() 函数
+$('.dropdown').dropdown({onChange: function(value, text, $choice) {
+  layer.msg(value + " : " + text);
+  }});
+// 选择 data-value="2" 的项为当前选项
+$('.dropdown').dropdown('set selected', 2);
+// 获取当前选项的 value
+$('.dropdown').dropdown('get value');
+// 获取当前选项的 text
+$('.dropdown').dropdown('get text');
     </script>
   </body>
 </html>
