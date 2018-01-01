@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
-    <!-- <link rel="Shortcut Icon" href="{% static 'images/bobo-logo-mascot.jpg' %}" type="image/x-icon"> -->
+    <link rel="Shortcut Icon" href="{% static 'images/bobo-logo-mascot.jpg' %}" type="image/x-icon">
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link rel="stylesheet" href="http://cdn.staticfile.org/semantic-ui/2.2.7/semantic.min.css">
@@ -14,35 +14,18 @@
 <script src="http://cdn.staticfile.org/semantic-ui/2.2.7/semantic.min.js"></script>
 <script src="http://cdn.staticfile.org/vue/2.0.3/vue.js"></script>
 <script src="http://cdn.staticfile.org/layer/2.3/layer.js"></script>
-
+<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+<script type="text/javascript">
+  $youziku.load("#bobushe-logo", "7cdfca2dbf9c4fe38e22868ce898e7df", "hdjxingshu");
+  $youziku.draw();
+</script>
     <title></title>
 
   </head>
   <body>
-    <div class="ui floating labeled icon dropdown button">
-    <input type="hidden">
-    <i class="world icon"></i>
-    <span class="text">选择地区</span>
-    <div class="menu">
-        <div class="item" data-value="1">北京</div>
-        <div class="item" data-value="2">上海</div>
-        <div class="item" data-value="3">天津</div>
-        <div class="item" data-value="4">湖北</div>
-    </div>
-</div>
-    <script>
-    // 初始化方式一：
-$('.dropdown').dropdown();
-// 初始化方式二：Dropdown，当选项变化时触发 onChange() 函数
-$('.dropdown').dropdown({onChange: function(value, text, $choice) {
-  layer.msg(value + " : " + text);
-  }});
-// 选择 data-value="2" 的项为当前选项
-$('.dropdown').dropdown('set selected', 2);
-// 获取当前选项的 value
-$('.dropdown').dropdown('get value');
-// 获取当前选项的 text
-$('.dropdown').dropdown('get text');
-    </script>
+    <h1 style="font-size: 40px;" id="bobushe-logo">电话问 和
+      <img class="ui middle aligned circular image" style="width: 45px; height: 45px;" src="{% static 'images/bobo-logo.jpg' %}" alt="">布波社
+    </h1>
+
   </body>
 </html>

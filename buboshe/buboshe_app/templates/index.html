@@ -19,18 +19,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-form/0.3.1/vue-form.min.js"></script>
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
-      $youziku.load("body", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
-      $youziku.load("a,h2,h4,h3,div,span,h6,title", "cae53446057c4f25bc17d85df01ec3ab", "quyuanri");
-      /*．．．*/
+      $youziku.load("#bobushe-logo-font", "4e0d0d55d1cb4af3b597fcf2e22727ae", "CaiYunHanMaoBi-Xing");
+      $youziku.load("body,div,h1,span,a", "6cb13ce58e914a058e1cbd257aee7efd", "Source-Han-Light");
       $youziku.draw();
     </script>
-    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
-<script type="text/javascript">
-   $youziku.load("#buboshe-logo,#nav-header", "4e0d0d55d1cb4af3b597fcf2e22727ae", "CaiYunHanMaoBi-Xing");
-   /*$youziku.load("#id1,.class1,h1", "4e0d0d55d1cb4af3b597fcf2e22727ae", "CaiYunHanMaoBi-Xing");*/
-   /*．．．*/
-   $youziku.draw();
-</script>
   </head>
   <style media="screen">
     * {
@@ -40,36 +32,6 @@
     body {
       background-color: #fcfdf8;
     }
-    /* .ui.text.fitted.borderless.seven.item.menu > #item{
-      background-color: red;
-    } */
-
-    /* .ui.text.borderless.menu {
-      margin-left: 30px;
-    }
-    #header_menu{
-      margin-left: 30px;
-      position: relative;
-      border-bottom: 0px solid #000;
-      transition: border-bottom 1s;
-      padding-bottom: 5px;
-    }
-
-    #header_menu:hover {
-      border-bottom: 1px solid #000;
-    }
-    .right.menu {
-      margin-right: 50px;
-    } */
-    /* @keyframes slowly_show {
-        from{
-          border-bottom:1px dashed #000;
-        }
-        to{
-          border-bottom: 1px solid #000;
-        }
-    } */
-
     #originator-list > div > img {
       margin-left: 20px;
     }
@@ -86,191 +48,63 @@
 
   <body>
     <!-- 导航栏 -->
-    <div class="ui text fitted borderless three item menu">
-      <a class="item" id="show-popup">
-        <h1 id="nav-header">祓禊</h1>
-        </a>
-        <div class="ui flowing popup top left transition hidden">
-  <div class="ui three column divided center aligned grid">
-    <div class="column">
-      <h4 class="ui header">Basic Plan</h4>
-      <p><b>2</b> projects, $10 a month</p>
-      <div class="ui button">Choose</div>
-    </div>
-    <div class="column">
-      <h4 class="ui header">Business Plan</h4>
-      <p><b>5</b> projects, $20 a month</p>
-      <div class="ui button">Choose</div>
-    </div>
-    <div class="column">
-      <h4 class="ui header">Premium Plan</h4>
-      <p><b>8</b> projects, $25 a month</p>
-      <div class="ui button">Choose</div>
-    </div>
-  </div>
-</div>
-
-
-      <a class="ui  item">
-        <h1 id="nav-header">祓禊</h1>
+    <div class="ui center aligned basic segment"  style="height:60px;" id="web-nav">
+      <a href="#" class="ui medium image">
+        <h1 style="font-size: 40px; color: black;" id="bobushe-logo-font">
+          <img class="ui middle aligned circular medium image" style="width: 45px; height: 45px;" src="{% static 'images/bobo-logo.jpg' %}" alt="">布波社
+        </h1>
       </a>
-      <a class="ui  item">
-        <h1 id="nav-header">祓禊</h1>
-      </a>
-      <!-- <div class="item">
-        <a class="browse item" id="show-popup">
-          <h1 id="nav-header">云笈</h1>
-        </a>
-        <div class="ui flowing popup top left transition hidden" style="top: 300px; left: 5px; bottom: auto; right: auto; width: 200px;">
-              <a href="#">
-                <h4 class="ui header">武侠</h4>
-              </a>
-              <a href="#">
-                <h4 class="ui header">武侠</h4>
-              </a>
-              <a href="#">
-                <h4 class="ui header">武侠</h4>
-              </a>
-              <a href="#">
-                <h4 class="ui header">武侠</h4>
-              </a>
-        </div>
-
-        <a class="item">
-          <h1 id="nav-header">祓禊</h1>
-        </a>
-        <a class="item">
-          <h1 id="nav-header">赛博</h1>
-        </a>
-      </div> -->
-      <!-- 中间LOGO -->
-      <!-- <div class="item">
-        <img class="ui middle aligned mini circular image" src="{% static 'images/bobo-logo.jpg' %}" alt=""><span id="buboshe-logo" style="font-size: 40px;">布波社</span>
-      </div> -->
-
     </div>
     <div class="ui divider"></div>
     <!-- 文章列表 -->
     <div class="ui basic segment container content">
       <div class="ui three column grid">
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
-        <div class="column">
-          <a class="ui fluid card" href="#">
-              <div class="image" >
-                <img src="{% static 'images/detail.jpg' %}" alt="" style="height:200px;object-fit: cover;">
-              </div>
-          </a>
-          <div class="title header" href="#">布波社文章</div>
-          <i class="icon grey unhide"></i>
-          <span style="color:#bbbbbb">10K</span>
-          <span class="" style="color:rgb(226, 226, 226)">|</span>
-          <i class="icon grey checkmark"></i>
-          <span style="color:#bbbbbb">10 people got it</span>
-        </div>
+        {% for art in articles_list %}
+            <div class="column">
+                <a class="ui fluid card">
+                    <div class="image" >
+                      {% if art.cover %}
+                        <img src="/upload/{{ art.cover }}" alt="" style="height:200px;object-fit: cover;">
+                      {% else %}
+                        <img src="{% static 'images/detail.jgp' %}" alt="" style="height:200px;object-fit: cover;">
+                      {% endif %}
+                    </div>
+                </a>
+
+                <div class="title header" href="#">{{ art.title|truncatechars:30 }}</div>
+                <i class="icon grey unhide"></i>
+                <span style="color:#bbbbbb">0 K</span>
+                <span class="" style="color:rgb(226, 226, 226)">|</span>
+                <i class="icon grey checkmark"></i>
+                <span style="font-family:'CaiYunHanMaoBi-f550412b61b745'; color:#bbbbbb;">0 人赞过</span>
+            </div>
+        {% endfor %}
       </div>
+    </div>
+
+    <!-- 页面导航 -->
+    <div class="ui center aligned very padded vertical segment container">
+        <div class="ui pagination menu">
+            {% if articles_list.has_previous %}
+                <a href="?page={{ articles_list.previous_page_number }}" class="item">
+                    <i class="icon red left arrow"></i>
+                </a>
+            {% else %}
+                <a href="?page={{ articles_list.start_index }}" class="disabled item">
+                    <i class="icon  left arrow"></i>
+                </a>
+            {% endif %}
+
+            {% if  articles_list.has_next %}
+                <a href="?page={{ articles_list.next_page_number }}" class="item">
+                    <i class="icon red right arrow"></i>
+                </a>
+            {% else %}
+                <a href="?page={{ articles_list.end_index }}" class="disabled item">
+                    <i class="icon  right arrow"></i>
+                </a>
+            {% endif %}
+        </div>
     </div>
     <!-- 创始人图片列表  -->
     <div class="ui center aligned basic segment container content-show-originator" id="originator-list">
@@ -295,16 +129,12 @@
       </h1>
       <h4  class="ui tiny header">
         <div class="sub header">
-          <span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span><span>|</span><span>HOME</span>
+          <span>关于布波</span><span> | </span><span>联系我们</span><span> | </span><span>加入我们</span><span> | </span><span>免责声明</span><span> | </span><span>帮助中心</span>
         </div>
       </h4>
       <h6>
         ©2017 布波社版权所有
       </h6>
     </div>
-    <script type="text/javascript">
-    // [[3]] 初始化 Popup
-      $('#show-popup').popup({ position: 'bottom center', offset: 20});
-    </script>
   </body>
 </html>
