@@ -35,18 +35,14 @@
     #originator-list > div > img {
       margin-left: 20px;
     }
-    #web-footer > i{
-      margin-left: 30px;
-    }
-    #web-footer >  h2 > span {
+    #web-footer > a > i{
       margin-left: 20px;
     }
-    #web-footer > h4 > div > span {
-      margin-left: 10px;
-    }
+
+
   </style>
 
-  <body>
+  <body id="app">
     <!-- 导航栏 -->
     <div class="ui center aligned basic segment"  style="height:60px;" id="web-nav">
       <a href="#" class="ui medium image">
@@ -109,18 +105,27 @@
     <!-- 创始人图片列表  -->
     <div class="ui center aligned basic segment container content-show-originator" id="originator-list">
         <div class="ui tiny circular images">
-          <img class="ui tiny circular image" src="{% static 'images/originator-1.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/originator-2.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/originator-3.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/originator-4.jpg' %}" alt="">
-          <img class="ui tiny circular image" src="{% static 'images/originator-5.jpg' %}" alt="">
+          <img class="ui tiny circular avatar image" src="{% static 'images/originator-1.jpg' %}" data-title="主笔" data-content="河东君/Lorelei" id="test-image-1">
+          <img class="ui tiny circular image" src="{% static 'images/originator-2.jpg' %}" data-title="主笔" data-content="鸡壳攻动队" id="test-image-2">
+          <img class="ui tiny circular image" src="{% static 'images/originator-3.jpg' %}" data-title="策划" data-content="蟋蟀仔" id="test-image-3">
+          <img class="ui tiny circular image" src="{% static 'images/originator-4.jpg' %}" data-title="策划" data-content="欧阳" id="test-image-4">
+          <img class="ui tiny circular image" src="{% static 'images/originator-5.jpg' %}" data-title="编辑" data-content="Queenie" id="test-image-5">
         </div>
     </div>
     <div class="ui center aligned basic segment container" id="web-footer">
-      <i class="large inverted circular green wechat icon"></i>
-      <i class="large inverted circular red weibo icon"></i>
-      <i class="large inverted yellow circular qq icon"></i>
-      <i class="large inverted blue circular facebook f icon"></i>
+        <a href="#">
+          <i class="big inverted circular green wechat icon" id="weixin-popup"></i>
+          <div class="ui custom popup transition hidden">
+            <img style="width:100px;height:100px;" src="{% static 'images/weixin-qr.jpg' %}" alt="">
+          </div>
+        </a>
+        <a href="#">
+          <i class="big inverted circular red weibo icon" id="weibo-popup"></i>
+          <div class="ui custom popup transition hidden">
+            <img style="width:100px;height:100px;" src="{% static 'images/weibo-qr.jpg' %}" alt="">
+          </div>
+        </a>
+
       <h1>
         <a class="ui sub header" href="#">博客</a>
         <a class="ui sub header" href="https://www.jianshu.com/u/5b7d67布波社文章8535">简书</a>
@@ -136,5 +141,18 @@
         ©2017 布波社版权所有
       </h6>
     </div>
+    <script type="text/javascript">
+      var vm = new Vue({
+        el: '#app',
+
+      })
+      $('#test-image-1').popup({position:"bottom center"});
+      $('#test-image-2').popup({position:"bottom center"});
+      $('#test-image-3').popup({position:"bottom center"});
+      $('#test-image-4').popup({position:"bottom center"});
+      $('#test-image-5').popup({position:"bottom center"});
+      $('#weixin-popup').popup({position:"bottom center"});
+      $('#weibo-popup').popup({position:"bottom center"});
+    </script>
   </body>
 </html>
