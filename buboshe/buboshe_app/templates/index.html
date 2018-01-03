@@ -19,8 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-form/0.3.1/vue-form.min.js"></script>
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
-      $youziku.load("#bobushe-logo-font", "4e0d0d55d1cb4af3b597fcf2e22727ae", "CaiYunHanMaoBi-Xing");
-      $youziku.load("body,div,h1,span,a", "6cb13ce58e914a058e1cbd257aee7efd", "Source-Han-Light");
+      $youziku.load("#bobushe-logo-font,body,div,h1,span,a", "dd049d48db454c37b965b47b449eb91f", "jdzhonyuanjian");
       $youziku.draw();
     </script>
   </head>
@@ -46,7 +45,7 @@
     <!-- 导航栏 -->
     <div class="ui center aligned basic segment"  style="height:60px;" id="web-nav">
       <a href="#" class="ui medium image">
-        <h1 style="font-size: 40px; color: black;" id="bobushe-logo-font">
+        <h1 style="font-size: 40px;color:#4F4F4F;" id="bobushe-logo-font">
           <img class="ui middle aligned circular medium image" style="width: 45px; height: 45px;" src="{% static 'images/bobo-logo.jpg' %}" alt="">布波社
         </h1>
       </a>
@@ -105,7 +104,7 @@
     <!-- 创始人图片列表  -->
     <div class="ui center aligned basic segment container content-show-originator" id="originator-list">
         <div class="ui tiny circular images">
-          <img class="ui tiny circular avatar image" src="{% static 'images/originator-1.jpg' %}" data-title="主笔" data-content="河东君/Lorelei" id="test-image-1">
+          <img class="ui tiny circular image" src="{% static 'images/originator-1.jpg' %}" data-title="主笔" data-content="河东君/Lorelei" id="test-image-1">
           <img class="ui tiny circular image" src="{% static 'images/originator-2.jpg' %}" data-title="主笔" data-content="鸡壳攻动队" id="test-image-2">
           <img class="ui tiny circular image" src="{% static 'images/originator-3.jpg' %}" data-title="策划" data-content="蟋蟀仔" id="test-image-3">
           <img class="ui tiny circular image" src="{% static 'images/originator-4.jpg' %}" data-title="策划" data-content="欧阳" id="test-image-4">
@@ -134,7 +133,7 @@
       </h1>
       <h4  class="ui tiny header">
         <div class="sub header">
-          <span>关于布波</span><span> | </span><span>联系我们</span><span> | </span><span>加入我们</span><span> | </span><span>免责声明</span><span> | </span><span>帮助中心</span>
+          <a href="#">关于布波</a> | <a href="#">联系我们</a> | <a href="#">加入我们</a> | <a href="#">免责声明</a>
         </div>
       </h4>
       <h6>
