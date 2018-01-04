@@ -68,10 +68,10 @@
 
                 <div class="title header" href="#">{{ art.title|truncatechars:30 }}</div>
                 <i class="icon grey unhide"></i>
-                <span style="color:#bbbbbb">0 K</span>
+                <span style="color:#bbbbbb">{{ art.views }}</span>
                 <span class="" style="color:rgb(226, 226, 226)">|</span>
                 <i class="icon grey checkmark"></i>
-                <span style="font-family:'CaiYunHanMaoBi-f550412b61b745'; color:#bbbbbb;">0 人赞过</span>
+                <span style="font-family:'CaiYunHanMaoBi-f550412b61b745'; color:#bbbbbb;">{{ art.likes }} 人赞过</span>
             </div>
         {% endfor %}
       </div>

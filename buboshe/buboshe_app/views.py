@@ -2,12 +2,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
-from buboshe_app.models import Articles
+from buboshe_app.models import Article
 
 # Create your views here.
 def index(request):
     context = {}
-    articles_list = Articles.objects.all().order_by('id')
+    articles_list = Article.objects.all().order_by('id')
     # 界面文章限定为9篇
     page_robot = Paginator(articles_list, 9)
     page_num = request.GET.get('page')
