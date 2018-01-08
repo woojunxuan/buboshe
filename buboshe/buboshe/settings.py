@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'buboshe.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'buboshe',
+        'NAME': 'bobo',
         'USER': 'root',
         'PASSWORD': 'admin123456',
         'HOST': '127.0.0.1',
@@ -126,3 +126,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/upload/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload').replace("//", "/")
+AUTH_USER_MODEL = 'buboshe_app.User'

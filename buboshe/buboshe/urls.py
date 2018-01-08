@@ -21,7 +21,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name="index"),
+    path('sign_in', views.sign_in, name="sign_in"),
+    path('sign_up', views.sign_up, name="sign_up"),
     # path('index/', views.index),
     path('admin/', admin.site.urls),
 ]

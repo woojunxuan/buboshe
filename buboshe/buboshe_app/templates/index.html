@@ -37,14 +37,12 @@
     #web-footer > a > i{
       margin-left: 20px;
     }
-
-
   </style>
 
   <body id="app">
     <!-- 导航栏 -->
     <div class="ui center aligned basic segment"  style="height:60px;" id="web-nav">
-      <a href="#" class="ui medium image">
+      <a href="{% url 'sign_in' %}" class="ui medium image">
         <h1 style="font-size: 40px;color:#4F4F4F;" id="bobushe-logo-font">
           <img class="ui middle aligned circular medium image" style="width: 45px; height: 45px;" src="{% static 'images/bobo-logo.jpg' %}" alt="">布波社
         </h1>
@@ -65,8 +63,8 @@
                       {% endif %}
                     </div>
                 </a>
-
-                <div class="title header" href="#">{{ art.title|truncatechars:30 }}</div>
+                <div class="title header" style="font-size: 18px;"href="#">{{ art.title|truncatechars:10 }}</div>
+                <div class="sub header" style="font-size:15px; color: grey;"href="#">{{ art.introduction|truncatechars:40 }}</div>
                 <i class="icon grey unhide"></i>
                 <span style="color:#bbbbbb">{{ art.views }}</span>
                 <span class="" style="color:rgb(226, 226, 226)">|</span>
@@ -133,7 +131,7 @@
       </h1>
       <h4  class="ui tiny header">
         <div class="sub header">
-          <a href="#">关于布波</a> | <a href="#">联系我们</a> | <a href="#">加入我们</a> | <a href="#">免责声明</a>
+          <a>关于布波</a> | <a>联系我们</a> | <a>加入我们</a> | <a>免责声明</a>
         </div>
       </h4>
       <h6>

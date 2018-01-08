@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>布波社</title>
+    <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buboshe.css' %}">
+    <link rel="Shortcut Icon" href="{% static 'images/bobo-logo-mascot.jpg' %}" type="image/x-icon">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/semantic-ui/2.2.7/semantic.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/semantic-ui/2.2.7/semantic.min.js"></script>
+    <script src="http://cdn.staticfile.org/vue/2.0.3/vue.js"></script>
+    <script src="http://cdn.staticfile.org/layer/2.3/layer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-validator/2.1.7/vue-validator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-form/0.3.1/vue-form.min.js"></script>
+  </head>
+  <body>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f1f1f1;
+      }
+      .ui.segment {
+        height: 450px;
+        width: 400px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* background: url("{% static 'images/bobo-logo.jpg' %}"); */
+        /* background-repeat:no-repeat; */
+        margin:-225px 0 0 -225px;
+      }
+      input {
+        height: 45px;
+      }
+      #login-button {
+        margin-top: 50px;
+      }
+
+    </style>
+    <div id="app"  class="ui segment">
+      <div class="ui header" style="margin-top: 25px;">
+        <img class="ui tiny circular image" style="width: 50px; height: 50px;margin-left:30px;" src="{% static 'images/bobo-logo.jpg' %}" alt="">
+        <!-- 默认为登陆界面 -->
+        <div class="ui large buttons" style="margin-left:5%;">
+          <a href="{% url 'sign_in' %}" class="ui blue button" v-on:click="login_or_registration()">登录</a>
+          <div class="or"></div>
+          <a href="{% url 'sign_up' %}" class="ui button" >注册</a>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui tiny form">
+        <!-- 用户名 -->
+        <div class="fields">
+          <div class="wide field"></div>
+          <div class="fourteen  wide field">
+            <div class="ui left icon input" >
+              <input type="text" placeholder="邮箱" name="username" v-model="user_mail" v-bind:value="user_mail">
+              <i class="mail icon"></i>
+            </div>
+          </div>
+          <div class="wide field"></div>
+        </div>
+        <!-- 密码 -->
+        <div class="fields">
+          <div class="wide field"></div>
+          <div class="fourteen  wide field">
+            <div class="ui left icon input">
+              <input type="password" placeholder="密码" v-model="user_password" v-bind:value="user_password">
+              <i class="unlock icon"></i>
+            </div>
+          </div>
+          <div class="wide field"></div>
+        </div>
+        <!-- 验证码 -->
+        <div class="fields">
+          <div class="wide field"></div>
+          <div class="fourteen  wide field">
+            <div class="ui left icon input">
+              <input type="text" placeholder="验证码" v-bind:value="verification_code" v-model="verification_code">
+              <i class="check square icon"></i>
+              <button class="ui circular button" v-on:click="get_verification_code()">获取验证码</button>
+            </div>
+          </div>
+          <div class="wide field"></div>
+        </div>
+
+        <!-- 记住我选项与找回密码栏 -->
+        <div class="fields">
+          <div class="wide field"></div>
+          <div class="five wide field">
+            <div class="ui checkbox">
+              <input type="checkbox" id="remember-me">
+              <label for="remember-me" style="color: grey;">记住我</label>
+            </div>
+          </div>
+          <div class="four wide field"></div>
+          <div class="six wide field"><a href="#" style="font-size: 13px;">登录遇到问题?</a></div>
+        </div>
+        <div class="fields">
+          <div class="wide field"></div>
+          <button class="fluid ui large blue circular button" id="login-button" type="submit" v-on:click="login()">登录</button>
+          <div class="wide field"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data:{
+            user_mail: '',
+		        user_password:'',
+		        verification_code:'',
+        },
+        methods:{
+          // 登录
+          login: function() {
+
+          },
+          // 获取验证码
+          get_verification_code: function () {
+
+          },
+        }
+      });
+      // //添加响应拦截器
+      // axios.interceptors.response.use(function(response){
+      //     //对响应数据做些事
+      //     var obj = JSON.parse(response.request.response);
+      //     return obj;
+      //   },function(error){
+      //     //请求错误时做些事
+      //     alert(error)
+      //     return Promise.reject(error);
+      // });
+    </script>
+  </body>
+</html>

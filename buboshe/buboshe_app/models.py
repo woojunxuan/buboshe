@@ -1,17 +1,41 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.contrib.auth.models import User
-# Create your models here.
+# from django.contrib.auth.forms import User
+from django.contrib.auth.models import AbstractUser
+import re
+from django.core.validators import ValidationError
 
 
-class UserProfile(models.Model):
-    belong_to = models.OneToOneField(to=User, related_name='profile', on_delete=models.CASCADE)
-    profile_image = models.FileField(upload_to='profile_image')
+def validate_user(username):
+    reg_en_obj = re.compile(r'^[a-zA-Z0-9_]$')
+    reg_cn_obj = re.compile(r'^[\u4e00-\u9fa5]$')
+    # 中英混合只能遍历验证
+    print('--------username-------------'.format(username))
+    if len(username) <= 0:
+        raise ValidationError('昵称不能为空-_-')
+    for a in username:
+        if not reg_en_obj.search(a) and not reg_cn_obj.search(a):
+            raise ValidationError('用户昵称由汉字,字母,数字,或者下划线组成-_-')
+
+def validate_password(password):
+    reg_en_obj = re.compile(r'^[a-zA-Z0-9_@.]$')
+    # 中英混合只能遍历验证
+    print('--------password-------------'.format(password))
+    if len(username) <= 6:
+        raise ValidationError('密码长度不能小于6-_-')
+    for a in username:
+        if not reg_en_obj.search(a):
+            raise ValidationError('用户密码由字母,数字,或者下划线@.组成-_-')
+
+class User(models.Model):
+    nickname = models.CharField(max_length=32, min_length=1, required=True,
+                                validators=[validate_user], unique=True)
+    email = models.EmailField(required=True, unique=True)
+    password = models.CharField(max_length=32, required=True)
+    email_verify_code = models.CharField(max_length=6, required=True)
 
     def __str__(self):
-        return self.belong_to.username
-
-
+        return self.nickname
 
 class Article(models.Model):
     title = models.CharField(null=True, blank=True, max_length=255)
