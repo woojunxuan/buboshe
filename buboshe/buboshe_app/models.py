@@ -28,11 +28,10 @@ def validate_password(password):
             raise ValidationError('用户密码由字母,数字,或者下划线@.组成-_-')
 
 class User(models.Model):
-    nickname = models.CharField(max_length=32, min_length=1, required=True,
-                                validators=[validate_user], unique=True)
-    email = models.EmailField(required=True, unique=True)
-    password = models.CharField(max_length=32, required=True)
-    email_verify_code = models.CharField(max_length=6, required=True)
+    nickname = models.CharField(max_length=32, validators=[validate_user], unique=True)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=32)
+    email_verify_code = models.CharField(max_length=6)
 
     def __str__(self):
         return self.nickname
